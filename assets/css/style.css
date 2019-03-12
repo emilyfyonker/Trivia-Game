@@ -1,0 +1,24 @@
+body {
+    background-color: lightblue;
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+
+  }
+
+  #afterSubmission {
+      visibility: hidden;
+  }
+
+  img {
+    justify-content: center;
+    padding-left: 23%;
+    border-image: 20px; color: palevioletred;
+
+  }
+h1 {
+  font-family: 'Indie Flower', cursive;
+  padding-left: 39%;
+}
+
+#quiz {
+}
