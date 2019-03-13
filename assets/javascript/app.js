@@ -20,34 +20,50 @@ var interval = setInterval(function(){
    
   }
 }, 1000);
+
+  document.getElementById("quiz").style.display = "block";
 }
 
 function check(){
-var questionOne = document.quiz.questionOne.value;
-var QuestionTwo = document.quiz.questionTwo.value;
-var correct = 0;
-var incorrect = 0;
+  var questionOne = document.querySelectorAll(".questionOne");
+  var q1 = Array.prototype.slice.call(questionOne)
+              .filter(function(answer) {
+                return answer.checked
+              });
+  console.log(q1);
+  
+  // function nodeConvert(nodeList) {   var answer =  Array.prototype.slice.call(nodeList)
+              // .filter(function(answer) {
+              //   return answer.checked
+              // });
+            //return answer}
+  // var QuestionTwo = document.quiz.questionTwo.value;
+  var correct = 0;
+  var incorrect = 0;
 
-if (questionOne.attr == "Point Guard"){
-    correct++;
-    console.log(correct);
+  // if(nodeConvert(nodeList) === )
+  if (q1[0].value === "Point Guard"){
+      correct++;
+      console.log("Correct: " + correct);
+  } else {
+    incorrect++;
+    console.log("Incorrect: " + incorrect);
+  }
+  // if (questionOne === "Post" || questionOne === "Cheerleader" || questionOne === "Backup"){
+  //   incorrect++;
+  //   console.log(incorrect);
+  // }
+  // if (questionTwo == "Certain Nuts"){
+  //     correct++;
+  // }
+  // if (questionTwo == "Penicillin" || "Latex" || "Bees"){
+  //   incorrect++;
+  // }
 
-}
-if (questionOne == "Post" || "Cheerleader" || "Backup"){
-  incorrect++;
-  console.log(incorrect);
-}
-if (questionTwo == "Certain Nuts"){
-    correct++;
-}
-if (questionTwo == "Penicillin" || "Latex" || "Bees"){
-  incorrect++;
-}
 
 
-
-document.getElementById("afterSubmission").style.visibility ="visible";
-document.getElementById("correctAnswers").innerHTML = "You answered " + correct + " correctly.";
+  document.getElementById("afterSubmission").style.visibility ="visible";
+  document.getElementById("correctAnswers").innerHTML = "You answered " + correct + " correctly.";
 
 }
   
