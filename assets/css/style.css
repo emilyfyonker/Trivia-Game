@@ -1,7 +1,10 @@
+
+
 body {
     background-color: lightblue;
     font-family: 'Indie Flower', cursive;
     font-size: 25px;
+    color: fuchsia;
 
   }
   
@@ -10,16 +13,50 @@ body {
   }
 
   img {
-    justify-content: center;
-    padding-left: 23%;
-    border-image: 20px; color: palevioletred;
+    display:block;
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 200px;
 
   }
 h1 {
   font-family: 'Indie Flower', cursive;
-  padding-left: 39%;
+  display:block;
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: fuchsia;
 }
+
+
 
 #quiz {
   display: none;
+  
+}
+
+#count{
+  padding-left: 50%;
+  font-size: 35px;
+  display:block;
+  margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+#quizDisplay{
+  display:block;
+  margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+#button{
+  background-color: fuchsia;
+  font-size: 30px;
+  display: block;
+  margin: 25px;
+  border-radius: 50%;
+  font-family: 'Indie Flower', cursive;
 }

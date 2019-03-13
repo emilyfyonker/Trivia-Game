@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 
     <meta charset="UTF-8">
@@ -15,35 +16,51 @@
 
 
 <body>
-<h1>Jordan Dong Trivia!!!</h1>
+<h1><strong>Jordan Dong Trivia!!!</strong></h1>
+<div id="Picture">
 <img src="assets/images/IMG_2910.png" alt="Jordan">
+</div>
 <div id="count">
 <input id = "button" type = "button" value = "Start" onClick = "timer();">
 
 </div>
 
-
+<div id="quizDisplay">
 <form id = "quiz">
-    <p>What basketball position does Jordan play?</p>
+    <p>1. What basketball position does Jordan play?</p>
     <input type = "radio" class="questionOne" name="questionOne" value="Point Guard"> Point Guard<br>
     <input type = "radio" class="questionOne" name="questionOne" value="Post"> Post<br>
     <input type = "radio" class="questionOne" name="questionOne" value="Cheerleader"> Cheerleader<br>
     <input type = "radio" class="questionOne" name="questionOne" value="Backup"> Backup<br>
 
-    <p>What is Jordan allergic to?</p>
-    <input type = "radio" id = "mc" name="questionTwo" value="Penicillin"> Penicillin<br>
-    <input type = "radio" id = "mc" name="questionTwo" value="Certain Nuts"> Certain Nuts<br>
-    <input type = "radio" id = "mc" name="questionTwo" value="Bees"> Bees<br>
-    <input type = "radio" id = "mc" name="questionTwo" value="Latex"> Latex<br>
+    <p>2. What is Jordan allergic to?</p>
+    <input type = "radio" class="questionTwo" id = "mc" name="questionTwo" value="Penicillin"> Penicillin<br>
+    <input type = "radio" class="questionTwo" id = "mc" name="questionTwo" value="Certain Nuts"> Certain Nuts<br>
+    <input type = "radio" class="questionTwo" id = "mc" name="questionTwo" value="Bees"> Bees<br>
+    <input type = "radio" class="questionTwo" id = "mc" name="questionTwo" value="Latex"> Latex<br>
 
+    <p>3. True or False: Jordan is a vegan</p>
+    <input type = "radio" class="questionThree" id = "three" name="questionThree" value="True"> True<br>
+    <input type = "radio" class="questionThree" id = "three" name="questionThree" value="False"> False<br>
+
+    <p>4. Jordan loves...</p>
+    <input type = "radio" class="questionFour" id = "four" name="questionFour" value="Working Out"> Working Out<br>
+    <input type = "radio" class="questionFour" id = "four" name="questionFour" value="Chinese Food"> Chinese Food<br>
+    <input type = "radio" class="questionFour" id = "four" name="questionFour" value="Needlepoint"> Needlepoint<br>
+    <input type = "radio" class="questionFour" id = "four" name="questionFour" value="All of the Above"> All of the Above<br>
+
+    <p>5. Jordan's opinion of Gandhi:</p>
+    <input type = "radio" class="questionFive" id = "four" name="questionFive" value="Hero"> Hero<br>
+    <input type = "radio" class="questionFive" id = "four" name="questionFive" value="Puppet"> Puppet<br>
 
 <input id = "button" type = "button" value = "Submit" onclick = "check();">
 
 
 </form>
-
+</div>
 <div id = "afterSubmission">
-<p id = "correctAnswers"></p>    
+<p id = "correctAnswers"></p>
+<p id = "incorrectAnswers"></p>    
 </div>
 </html>
 

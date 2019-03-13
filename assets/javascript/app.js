@@ -16,14 +16,15 @@ var interval = setInterval(function(){
   if (count === 0){
     clearInterval(interval);
     document.getElementById('count').innerHTML='Time is up, Buttercup';
-
+    $("#quiz").hide();
    
   }
 }, 1000);
 
   document.getElementById("quiz").style.display = "block";
 }
-
+var correct = 0;
+var incorrect = 0;
 function check(){
   var questionOne = document.querySelectorAll(".questionOne");
   var q1 = Array.prototype.slice.call(questionOne)
@@ -31,39 +32,82 @@ function check(){
                 return answer.checked
               });
   console.log(q1);
-  
-  // function nodeConvert(nodeList) {   var answer =  Array.prototype.slice.call(nodeList)
-              // .filter(function(answer) {
-              //   return answer.checked
-              // });
-            //return answer}
-  // var QuestionTwo = document.quiz.questionTwo.value;
-  var correct = 0;
-  var incorrect = 0;
+
+ 
 
   // if(nodeConvert(nodeList) === )
   if (q1[0].value === "Point Guard"){
       correct++;
       console.log("Correct: " + correct);
-  } else {
+  } 
+  else {
     incorrect++;
     console.log("Incorrect: " + incorrect);
   }
-  // if (questionOne === "Post" || questionOne === "Cheerleader" || questionOne === "Backup"){
-  //   incorrect++;
-  //   console.log(incorrect);
-  // }
-  // if (questionTwo == "Certain Nuts"){
-  //     correct++;
-  // }
-  // if (questionTwo == "Penicillin" || "Latex" || "Bees"){
-  //   incorrect++;
-  // }
+  var questionTwo = document.querySelectorAll(".questionTwo");
+  var q2 = Array.prototype.slice.call(questionTwo)
+              .filter(function(answer) {
+                return answer.checked
+              });
+  console.log(q2);
 
+  if (q2[0].value === "Certain Nuts"){
+    correct++;
+    console.log("Correct: " + correct);
+} 
+else {
+  incorrect++;
+  console.log("Incorrect: " + incorrect);
+}
+/////////////
+var questionThree = document.querySelectorAll(".questionThree");
+var q3 = Array.prototype.slice.call(questionThree)
+            .filter(function(answer) {
+              return answer.checked
+            });
+console.log(q3);
+if (q3[0].value === "False"){
+  incorrect++;
+  console.log("InCorrect: " + incorrect);
+} 
+else {
+correct++;
+console.log("Correct: " + correct);
+}
+var questionFour = document.querySelectorAll(".questionFour");
+  var q4 = Array.prototype.slice.call(questionFour)
+              .filter(function(answer) {
+                return answer.checked
+              });
+  console.log(q4);
 
+  if (q4[0].value === "All of the Above"){
+    correct++;
+    console.log("Correct: " + correct);
+} 
+else {
+  incorrect++;
+  console.log("Incorrect: " + incorrect);
+}
+var questionFive = document.querySelectorAll(".questionFive");
+  var q5 = Array.prototype.slice.call(questionFive)
+              .filter(function(answer) {
+                return answer.checked
+              });
+  console.log(q5);
+
+  if (q5[0].value === "Puppet"){
+    correct++;
+    console.log("Correct: " + correct);
+} 
+else {
+  incorrect++;
+  console.log("Incorrect: " + incorrect);
+}
 
   document.getElementById("afterSubmission").style.visibility ="visible";
   document.getElementById("correctAnswers").innerHTML = "You answered " + correct + " correctly.";
+  document.getElementById("incorrectAnswers").innerHTML = "You answered " + incorrect + " incorrectly.";
 
 }
   
